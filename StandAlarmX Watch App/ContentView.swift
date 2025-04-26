@@ -10,7 +10,7 @@ struct ContentView: View {
     @State private var duration: TimeInterval = 0
     @State private var timeRemaining: TimeInterval = 0
     @State private var timer: Timer?
-    
+
     @State private var isSoundOn = false  // 🔊 New switch
     @State private var isNotificationStopped = false // Track notification stop state
 
@@ -18,18 +18,10 @@ struct ContentView: View {
     private let standTimeout: Int = 30
 
     private var frequencies: [TimeInterval] {
-        [0, 20, 1800, 3600, 7200].map { $0 * debugRate }
+        [0, 30, 1800, 3600, 7200].map { $0 * debugRate }
     }
     private var freq_texts: [String] {
-        ["Off", "5 sec", "0.5 hr", "1 hr", "2 hr"]
-    }
-    
-    struct ScrollOffsetKey: PreferenceKey {
-        static var defaultValue: CGFloat = 0
-
-        static func reduce(value: inout CGFloat, nextValue: () -> CGFloat) {
-            value = nextValue()
-        }
+        ["Off", "30 sec", "0.5 hr", "1 hr", "2 hr"]
     }
 
     struct FrequencyPickerView: View {
@@ -47,7 +39,7 @@ struct ContentView: View {
             }
             .labelsHidden()
             .pickerStyle(.wheel)
-            .frame(height: 100)
+            .frame(height: 90)
             .focusable(true)
         }
     }
@@ -70,7 +62,6 @@ struct ContentView: View {
                     Text("⏱️ \(Int(timeRemaining)) seconds left")
                         .font(.headline)
                     HStack {
-                        // background color is red
                         Button("Silent...") {
                             stopNotification()
                         }
@@ -82,7 +73,6 @@ struct ContentView: View {
                         }
                         .buttonStyle(.borderedProminent)
                         .tint(.red)
-                        
                     }
                 } else if isVibrating {
                     Text("⏱️ Time to Stand!")
@@ -94,9 +84,7 @@ struct ContentView: View {
                 } else if selectedFrequency == 0 {
                     Text("⏱️ Off")
                         .font(.headline)
-                    Button("Off") {
-                        
-                    }
+                    Button("Off") {}
 
                 } else {
                     Text("⏱️ Wait to start")
@@ -137,19 +125,13 @@ struct ContentView: View {
         }
         .onAppear {
             requestNotificationPermission()
-
             if isRunning {
                 updateTimeRemaining()
-                timer = Timer.scheduledTimer(
-                    withTimeInterval: 1.0,
-                    repeats: true
-                ) { _ in
-                    updateTimeRemaining()
-                    if !isNotificationStopped {
-                        triggerNotification()  // Notify periodically
-                    }
-                }
+                startBackgroundTimer() // Start background timer
             }
+        }
+        .onDisappear {
+            stopTimerLoop() // Ensure the timer is stopped when leaving the app
         }
     }
 
@@ -160,9 +142,7 @@ struct ContentView: View {
             if success {
                 print("Notifications permission granted ✅")
             } else if let error = error {
-                print(
-                    "Notification permission error: \(error.localizedDescription)"
-                )
+                print("Notification permission error: \(error.localizedDescription)")
             }
         }
     }
@@ -174,16 +154,9 @@ struct ContentView: View {
         timeRemaining = duration
         isRunning = true
         isVibrating = false
-        var loopCounter = 0
 
-        timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) {
-            _ in
-            updateTimeRemaining()
-            if !isNotificationStopped && loopCounter > 0 {
-                loopCounter += 1
-                triggerNotification()  // Notify periodically
-            }
-        }
+        // Run a background timer using notifications
+        startBackgroundTimer()
     }
 
     func updateTimeRemaining() {
@@ -192,10 +165,22 @@ struct ContentView: View {
         let remaining = duration - elapsed
         if remaining <= 0 {
             stopTimerLoop()
-            triggerNotification()
-            startTimer()  // Start a new timer after time is up
+            triggerNotification() // Trigger notification when the time is up
+            startTimer() // Start a new timer after time is up
         } else {
             timeRemaining = remaining
+        }
+    }
+
+    func startBackgroundTimer() {
+        var loopCounter = 0
+        timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { _ in
+            updateTimeRemaining()
+            
+            if !isNotificationStopped && loopCounter > 0 {
+                loopCounter += 1
+                triggerNotification() // Trigger periodic notifications in the background
+            }
         }
     }
 
@@ -209,13 +194,12 @@ struct ContentView: View {
         timer = nil
         isRunning = false
         isVibrating = false
-        isNotificationStopped = false // Allow notifications again if the timer is stopped entirely
+        isNotificationStopped = false
         print("Timer loop stopped.")
     }
 
     func triggerNotification() {
         isVibrating = true
-        print("trigger loop")
         // Trigger vibration
         WKInterfaceDevice.current().play(.notification)
 
@@ -227,14 +211,12 @@ struct ContentView: View {
         let request = UNNotificationRequest(
             identifier: UUID().uuidString,
             content: content,
-            trigger: nil
+            trigger: nil // Immediate notification
         )
 
         UNUserNotificationCenter.current().add(request) { error in
             if let error = error {
-                print(
-                    "Failed to schedule notification: \(error.localizedDescription)"
-                )
+                print("Failed to schedule notification: \(error.localizedDescription)")
             }
         }
     }
