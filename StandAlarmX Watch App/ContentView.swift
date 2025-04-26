@@ -1,6 +1,6 @@
 import SwiftUI
-import WatchKit
 import UserNotifications
+import WatchKit
 
 struct ContentView: View {
     @State private var selectedFrequency = 1
@@ -10,19 +10,28 @@ struct ContentView: View {
     @State private var duration: TimeInterval = 0
     @State private var timeRemaining: TimeInterval = 0
     @State private var timer: Timer?
-
+    
     @State private var isSoundOn = false  // 🔊 New switch
+    @State private var isNotificationStopped = false // Track notification stop state
 
     private let debugRate: TimeInterval = 1
     private let standTimeout: Int = 30
 
     private var frequencies: [TimeInterval] {
-        [0, 5, 1800, 3600, 7200].map { $0 * debugRate }
+        [0, 20, 1800, 3600, 7200].map { $0 * debugRate }
     }
     private var freq_texts: [String] {
         ["Off", "5 sec", "0.5 hr", "1 hr", "2 hr"]
     }
     
+    struct ScrollOffsetKey: PreferenceKey {
+        static var defaultValue: CGFloat = 0
+
+        static func reduce(value: inout CGFloat, nextValue: () -> CGFloat) {
+            value = nextValue()
+        }
+    }
+
     struct FrequencyPickerView: View {
         @Binding var selectedFrequency: Int
         let freq_texts: [String]
@@ -38,7 +47,7 @@ struct ContentView: View {
             }
             .labelsHidden()
             .pickerStyle(.wheel)
-            .frame(height: 85)
+            .frame(height: 100)
             .focusable(true)
         }
     }
@@ -47,31 +56,52 @@ struct ContentView: View {
         @Binding var isRunning: Bool
         @Binding var isVibrating: Bool
         @Binding var timeRemaining: TimeInterval
+        @Binding var isNotificationStopped: Bool
+        let freq_texts: [String]
         let frequencies: [TimeInterval]
         let selectedFrequency: Int
         let startTimer: () -> Void
-        let stopTimer: () -> Void
+        let stopNotification: () -> Void
+        let stopTimerLoop: () -> Void
 
         var body: some View {
             VStack {
                 if isRunning {
                     Text("⏱️ \(Int(timeRemaining)) seconds left")
                         .font(.headline)
-                    Button("Stop") {
-                        stopTimer()
+                    HStack {
+                        // background color is red
+                        Button("Silent...") {
+                            stopNotification()
+                        }
+                        .buttonStyle(.borderedProminent)
+                        .tint(.blue)
+
+                        Button("Stop!") {
+                            stopTimerLoop()
+                        }
+                        .buttonStyle(.borderedProminent)
+                        .tint(.red)
+                        
                     }
-                    .buttonStyle(.borderedProminent)
                 } else if isVibrating {
                     Text("⏱️ Time to Stand!")
                         .font(.headline)
                     Button("Stop") {
-                        stopTimer()
+                        stopTimerLoop()
                     }
                     .buttonStyle(.borderedProminent)
+                } else if selectedFrequency == 0 {
+                    Text("⏱️ Off")
+                        .font(.headline)
+                    Button("Off") {
+                        
+                    }
+
                 } else {
                     Text("⏱️ Wait to start")
                         .font(.headline)
-                    Button("Remind Each \(Int(frequencies[selectedFrequency]))") {
+                    Button("Remind Each \(freq_texts[selectedFrequency])") {
                         startTimer()
                     }
                     .buttonStyle(.bordered)
@@ -82,41 +112,57 @@ struct ContentView: View {
 
     var body: some View {
         VStack(spacing: 12) {
-            FrequencyPickerView(selectedFrequency: $selectedFrequency, freq_texts: freq_texts)
+            FrequencyPickerView(
+                selectedFrequency: $selectedFrequency,
+                freq_texts: freq_texts
+            )
 
             TimerView(
                 isRunning: $isRunning,
                 isVibrating: $isVibrating,
                 timeRemaining: $timeRemaining,
+                isNotificationStopped: $isNotificationStopped,
+                freq_texts: freq_texts,
                 frequencies: frequencies,
                 selectedFrequency: selectedFrequency,
                 startTimer: startTimer,
-                stopTimer: stopTimer
+                stopNotification: stopNotification,
+                stopTimerLoop: stopTimerLoop
             )
         }
         .padding()
         .onTapGesture {
             updateTimeRemaining()
-            stopTimer()
+            stopTimerLoop()  // Stop the loop when tapping
         }
         .onAppear {
             requestNotificationPermission()
 
             if isRunning {
                 updateTimeRemaining()
-                timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { _ in
+                timer = Timer.scheduledTimer(
+                    withTimeInterval: 1.0,
+                    repeats: true
+                ) { _ in
                     updateTimeRemaining()
+                    if !isNotificationStopped {
+                        triggerNotification()  // Notify periodically
+                    }
                 }
             }
         }
     }
 
     func requestNotificationPermission() {
-        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound]) { success, error in
+        UNUserNotificationCenter.current().requestAuthorization(options: [
+            .alert, .sound,
+        ]) { success, error in
             if success {
                 print("Notifications permission granted ✅")
             } else if let error = error {
-                print("Notification permission error: \(error.localizedDescription)")
+                print(
+                    "Notification permission error: \(error.localizedDescription)"
+                )
             }
         }
     }
@@ -128,9 +174,15 @@ struct ContentView: View {
         timeRemaining = duration
         isRunning = true
         isVibrating = false
+        var loopCounter = 0
 
-        timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { _ in
+        timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) {
+            _ in
             updateTimeRemaining()
+            if !isNotificationStopped && loopCounter > 0 {
+                loopCounter += 1
+                triggerNotification()  // Notify periodically
+            }
         }
     }
 
@@ -139,22 +191,33 @@ struct ContentView: View {
         let elapsed = Date().timeIntervalSince(startDate)
         let remaining = duration - elapsed
         if remaining <= 0 {
-            stopTimer()
+            stopTimerLoop()
             triggerNotification()
+            startTimer()  // Start a new timer after time is up
         } else {
             timeRemaining = remaining
         }
     }
 
-    func stopTimer() {
+    func stopNotification() {
+        isNotificationStopped = true
+        print("Notifications stopped.")
+    }
+
+    func stopTimerLoop() {
         timer?.invalidate()
         timer = nil
         isRunning = false
         isVibrating = false
+        isNotificationStopped = false // Allow notifications again if the timer is stopped entirely
+        print("Timer loop stopped.")
     }
 
     func triggerNotification() {
         isVibrating = true
+        print("trigger loop")
+        // Trigger vibration
+        WKInterfaceDevice.current().play(.notification)
 
         let content = UNMutableNotificationContent()
         content.title = "Time to Stand!"
@@ -169,7 +232,9 @@ struct ContentView: View {
 
         UNUserNotificationCenter.current().add(request) { error in
             if let error = error {
-                print("Failed to schedule notification: \(error.localizedDescription)")
+                print(
+                    "Failed to schedule notification: \(error.localizedDescription)"
+                )
             }
         }
     }
