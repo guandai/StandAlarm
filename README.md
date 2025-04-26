@@ -1,62 +1,37 @@
-# StandAlarm
+# StandAlarm Watch App
 
-StandAlarm is an Apple Watch application designed to remind you to stand up at regular intervals throughout the day. It helps promote better health by reducing prolonged periods of sitting.
+A watchOS application designed to help users stay active by reminding them to stand up at regular intervals. Perfect for those who want to maintain an active lifestyle while working or studying.
 
 ## Features
 
-- **Customizable Intervals**: Choose from multiple reminder frequencies (30 minutes, 1 hour, 2 hours, or turn it off)
-- **Vibration Alerts**: Receive haptic feedback when it's time to stand
-- **Simple Interface**: Easy-to-use interface designed specifically for Apple Watch
-- **Minimal Battery Usage**: Optimized to use minimal battery power
+- **Customizable Alarms**: Set intervals for standing reminders (e.g., every 30/60/90 minutes)
+- **Gentle Notifications**: Haptic feedback with customizable vibration patterns
+- **Progress Tracking**: Daily standing goal tracking with visual statistics
+- **Health Integration**: Sync with Apple Health to track standing hours
+- **Quick Toggle**: Complication support for easy activation/deactivation
 
-## Screenshots
+## Requirements
 
-(Screenshots will be added here)
+- watchOS 10.0+
+- Xcode 15.0+
+- Swift 5.9+
 
 ## Installation
 
-### Requirements
-- watchOS device
-- Xcode 15 or later
+1. Clone repository:
+```bash
+git clone https://github.com/yourusername/StandAlarm.git
+```
+2. Open `StandAlarm.xcodeproj` in Xcode
+3. Build for your target device/simulator
 
-### Installation Steps
-1. Clone this repository
-2. Open the project in Xcode
-3. Select your Apple Watch as the deployment target
-4. Build and run the application
+## Configuration
 
-## Usage
+Modify `StandAlarmApp.swift` to adjust:
+- Default reminder intervals
+- Initial haptic feedback settings
+- HealthKit integration options
 
-1. Open the StandAlarm app on your Apple Watch
-2. Select your preferred reminder frequency using the picker wheel
-3. Tap "Start" to begin the timer
-4. When the timer completes, your watch will vibrate to remind you to stand
-5. Tap "Stop" to acknowledge the reminder or to stop the timer at any time
+## Contributing
 
-## Development
-
-StandAlarm is built using:
-- Swift
-- SwiftUI
-- WatchKit
-
-The app uses a simple timer-based system with haptic feedback to provide stand-up reminders.
-
-## Future Enhancements
-
-- Sound notifications (currently in development)
-- Health app integration to track standing activity
-- Custom reminder messages
-- More interval options
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## Author
-
-Created by Zheng Dai
-
----
-
-*StandAlarm: Your personal reminder to stand up and move!*
+Pull requests welcome! Please follow Swift style guidelines and include tests for new features.
