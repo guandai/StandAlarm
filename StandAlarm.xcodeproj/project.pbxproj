@@ -1,0 +1,671 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		499B7B702DBC5C400020A6A5 /* StandAlarm Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 499B7B6F2DBC5C400020A6A5 /* StandAlarm Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		499B7B712DBC5C400020A6A5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 499B7B632DBC5C400020A6A5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 499B7B6E2DBC5C400020A6A5;
+			remoteInfo = "StandAlarm Watch App";
+		};
+		499B7B7F2DBC5C420020A6A5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 499B7B632DBC5C400020A6A5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 499B7B6E2DBC5C400020A6A5;
+			remoteInfo = "StandAlarm Watch App";
+		};
+		499B7B892DBC5C420020A6A5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 499B7B632DBC5C400020A6A5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 499B7B6E2DBC5C400020A6A5;
+			remoteInfo = "StandAlarm Watch App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		499B7B952DBC5C420020A6A5 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				499B7B702DBC5C400020A6A5 /* StandAlarm Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		499B7B692DBC5C400020A6A5 /* StandAlarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StandAlarm.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		499B7B6F2DBC5C400020A6A5 /* StandAlarm Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "StandAlarm Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		499B7B7E2DBC5C420020A6A5 /* StandAlarm Watch AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "StandAlarm Watch AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		499B7B882DBC5C420020A6A5 /* StandAlarm Watch AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "StandAlarm Watch AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		499B7B732DBC5C400020A6A5 /* StandAlarm Watch App */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "StandAlarm Watch App";
+			sourceTree = "<group>";
+		};
+		499B7B812DBC5C420020A6A5 /* StandAlarm Watch AppTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "StandAlarm Watch AppTests";
+			sourceTree = "<group>";
+		};
+		499B7B8B2DBC5C420020A6A5 /* StandAlarm Watch AppUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "StandAlarm Watch AppUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		499B7B6C2DBC5C400020A6A5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		499B7B7B2DBC5C420020A6A5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		499B7B852DBC5C420020A6A5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		499B7B622DBC5C400020A6A5 = {
+			isa = PBXGroup;
+			children = (
+				499B7B732DBC5C400020A6A5 /* StandAlarm Watch App */,
+				499B7B812DBC5C420020A6A5 /* StandAlarm Watch AppTests */,
+				499B7B8B2DBC5C420020A6A5 /* StandAlarm Watch AppUITests */,
+				499B7B6A2DBC5C400020A6A5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		499B7B6A2DBC5C400020A6A5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				499B7B692DBC5C400020A6A5 /* StandAlarm.app */,
+				499B7B6F2DBC5C400020A6A5 /* StandAlarm Watch App.app */,
+				499B7B7E2DBC5C420020A6A5 /* StandAlarm Watch AppTests.xctest */,
+				499B7B882DBC5C420020A6A5 /* StandAlarm Watch AppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		499B7B682DBC5C400020A6A5 /* StandAlarm */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 499B7B962DBC5C420020A6A5 /* Build configuration list for PBXNativeTarget "StandAlarm" */;
+			buildPhases = (
+				499B7B672DBC5C400020A6A5 /* Resources */,
+				499B7B952DBC5C420020A6A5 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				499B7B722DBC5C400020A6A5 /* PBXTargetDependency */,
+			);
+			name = StandAlarm;
+			packageProductDependencies = (
+			);
+			productName = StandAlarm;
+			productReference = 499B7B692DBC5C400020A6A5 /* StandAlarm.app */;
+			productType = "com.apple.product-type.application.watchapp2-container";
+		};
+		499B7B6E2DBC5C400020A6A5 /* StandAlarm Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 499B7B922DBC5C420020A6A5 /* Build configuration list for PBXNativeTarget "StandAlarm Watch App" */;
+			buildPhases = (
+				499B7B6B2DBC5C400020A6A5 /* Sources */,
+				499B7B6C2DBC5C400020A6A5 /* Frameworks */,
+				499B7B6D2DBC5C400020A6A5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				499B7B732DBC5C400020A6A5 /* StandAlarm Watch App */,
+			);
+			name = "StandAlarm Watch App";
+			packageProductDependencies = (
+			);
+			productName = "StandAlarm Watch App";
+			productReference = 499B7B6F2DBC5C400020A6A5 /* StandAlarm Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
+		499B7B7D2DBC5C420020A6A5 /* StandAlarm Watch AppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 499B7B992DBC5C420020A6A5 /* Build configuration list for PBXNativeTarget "StandAlarm Watch AppTests" */;
+			buildPhases = (
+				499B7B7A2DBC5C420020A6A5 /* Sources */,
+				499B7B7B2DBC5C420020A6A5 /* Frameworks */,
+				499B7B7C2DBC5C420020A6A5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				499B7B802DBC5C420020A6A5 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				499B7B812DBC5C420020A6A5 /* StandAlarm Watch AppTests */,
+			);
+			name = "StandAlarm Watch AppTests";
+			packageProductDependencies = (
+			);
+			productName = "StandAlarm Watch AppTests";
+			productReference = 499B7B7E2DBC5C420020A6A5 /* StandAlarm Watch AppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		499B7B872DBC5C420020A6A5 /* StandAlarm Watch AppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 499B7B9C2DBC5C420020A6A5 /* Build configuration list for PBXNativeTarget "StandAlarm Watch AppUITests" */;
+			buildPhases = (
+				499B7B842DBC5C420020A6A5 /* Sources */,
+				499B7B852DBC5C420020A6A5 /* Frameworks */,
+				499B7B862DBC5C420020A6A5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				499B7B8A2DBC5C420020A6A5 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				499B7B8B2DBC5C420020A6A5 /* StandAlarm Watch AppUITests */,
+			);
+			name = "StandAlarm Watch AppUITests";
+			packageProductDependencies = (
+			);
+			productName = "StandAlarm Watch AppUITests";
+			productReference = 499B7B882DBC5C420020A6A5 /* StandAlarm Watch AppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		499B7B632DBC5C400020A6A5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1630;
+				LastUpgradeCheck = 1630;
+				TargetAttributes = {
+					499B7B682DBC5C400020A6A5 = {
+						CreatedOnToolsVersion = 16.3;
+					};
+					499B7B6E2DBC5C400020A6A5 = {
+						CreatedOnToolsVersion = 16.3;
+					};
+					499B7B7D2DBC5C420020A6A5 = {
+						CreatedOnToolsVersion = 16.3;
+						TestTargetID = 499B7B6E2DBC5C400020A6A5;
+					};
+					499B7B872DBC5C420020A6A5 = {
+						CreatedOnToolsVersion = 16.3;
+						TestTargetID = 499B7B6E2DBC5C400020A6A5;
+					};
+				};
+			};
+			buildConfigurationList = 499B7B662DBC5C400020A6A5 /* Build configuration list for PBXProject "StandAlarm" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 499B7B622DBC5C400020A6A5;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 499B7B6A2DBC5C400020A6A5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				499B7B682DBC5C400020A6A5 /* StandAlarm */,
+				499B7B6E2DBC5C400020A6A5 /* StandAlarm Watch App */,
+				499B7B7D2DBC5C420020A6A5 /* StandAlarm Watch AppTests */,
+				499B7B872DBC5C420020A6A5 /* StandAlarm Watch AppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		499B7B672DBC5C400020A6A5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		499B7B6D2DBC5C400020A6A5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		499B7B7C2DBC5C420020A6A5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		499B7B862DBC5C420020A6A5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		499B7B6B2DBC5C400020A6A5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		499B7B7A2DBC5C420020A6A5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		499B7B842DBC5C420020A6A5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		499B7B722DBC5C400020A6A5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 499B7B6E2DBC5C400020A6A5 /* StandAlarm Watch App */;
+			targetProxy = 499B7B712DBC5C400020A6A5 /* PBXContainerItemProxy */;
+		};
+		499B7B802DBC5C420020A6A5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 499B7B6E2DBC5C400020A6A5 /* StandAlarm Watch App */;
+			targetProxy = 499B7B7F2DBC5C420020A6A5 /* PBXContainerItemProxy */;
+		};
+		499B7B8A2DBC5C420020A6A5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 499B7B6E2DBC5C400020A6A5 /* StandAlarm Watch App */;
+			targetProxy = 499B7B892DBC5C420020A6A5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		499B7B902DBC5C420020A6A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 7A8P3NLUDW;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		499B7B912DBC5C420020A6A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 7A8P3NLUDW;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		499B7B932DBC5C420020A6A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7A8P3NLUDW;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = StandAlarm;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKWatchOnly = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = twindai.StandAlarm.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 11.4;
+			};
+			name = Debug;
+		};
+		499B7B942DBC5C420020A6A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7A8P3NLUDW;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = StandAlarm;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKWatchOnly = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = twindai.StandAlarm.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 11.4;
+			};
+			name = Release;
+		};
+		499B7B972DBC5C420020A6A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7A8P3NLUDW;
+				INFOPLIST_KEY_CFBundleDisplayName = StandAlarm;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = twindai.StandAlarm;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		499B7B982DBC5C420020A6A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7A8P3NLUDW;
+				INFOPLIST_KEY_CFBundleDisplayName = StandAlarm;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = twindai.StandAlarm;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		499B7B9A2DBC5C420020A6A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7A8P3NLUDW;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "twindai.StandAlarm-Watch-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StandAlarm Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/StandAlarm Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 11.4;
+			};
+			name = Debug;
+		};
+		499B7B9B2DBC5C420020A6A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7A8P3NLUDW;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "twindai.StandAlarm-Watch-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StandAlarm Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/StandAlarm Watch App";
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 11.4;
+			};
+			name = Release;
+		};
+		499B7B9D2DBC5C420020A6A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7A8P3NLUDW;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "twindai.StandAlarm-Watch-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "StandAlarm Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 11.4;
+			};
+			name = Debug;
+		};
+		499B7B9E2DBC5C420020A6A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7A8P3NLUDW;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "twindai.StandAlarm-Watch-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "StandAlarm Watch App";
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 11.4;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		499B7B662DBC5C400020A6A5 /* Build configuration list for PBXProject "StandAlarm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				499B7B902DBC5C420020A6A5 /* Debug */,
+				499B7B912DBC5C420020A6A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		499B7B922DBC5C420020A6A5 /* Build configuration list for PBXNativeTarget "StandAlarm Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				499B7B932DBC5C420020A6A5 /* Debug */,
+				499B7B942DBC5C420020A6A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		499B7B962DBC5C420020A6A5 /* Build configuration list for PBXNativeTarget "StandAlarm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				499B7B972DBC5C420020A6A5 /* Debug */,
+				499B7B982DBC5C420020A6A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		499B7B992DBC5C420020A6A5 /* Build configuration list for PBXNativeTarget "StandAlarm Watch AppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				499B7B9A2DBC5C420020A6A5 /* Debug */,
+				499B7B9B2DBC5C420020A6A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		499B7B9C2DBC5C420020A6A5 /* Build configuration list for PBXNativeTarget "StandAlarm Watch AppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				499B7B9D2DBC5C420020A6A5 /* Debug */,
+				499B7B9E2DBC5C420020A6A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 499B7B632DBC5C400020A6A5 /* Project object */;
+}
