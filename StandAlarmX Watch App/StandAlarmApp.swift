@@ -1,6 +1,6 @@
 //
 //  StandAlarmApp.swift
-//  StandAlarm Watch App
+//  StandAlarmX Watch App
 //
 //  Created by zheng dai on 4/26/25.
 //

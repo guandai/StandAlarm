@@ -1,6 +1,6 @@
 //
 //  StandAlarm_Watch_AppTests.swift
-//  StandAlarm Watch AppTests
+//  StandAlarmX Watch AppTests
 //
 //  Created by zheng dai on 4/26/25.
 //

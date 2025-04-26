@@ -1,8 +1,8 @@
-# StandAlarm Watch App
+# StandAlarmX Watch App
 
 **Elevate Your Routine with Intelligent Alarms**
 
-StandAlarm is a innovative Apple Watch app designed to enhance your daily routine through smart, context-aware alarms. 
+StandAlarmX is a innovative Apple Watch app designed to enhance your daily routine through smart, context-aware alarms. 
 
 ### Key Features:
 - 🕒 Dynamic alarm scheduling based on calendar events & location

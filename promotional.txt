@@ -1,4 +1,4 @@
-StandAlarm: Posture Coach ⌚
+StandAlarmX: Posture Coach ⌚
 
 Smart Apple Watch alerts break sedentary habits. Features:
 • Hourly stand reminders • Activity goals
