@@ -1,0 +1,28 @@
+# StandAlarm Watch App
+
+**Elevate Your Routine with Intelligent Alarms**
+
+StandAlarm is a innovative Apple Watch app designed to enhance your daily routine through smart, context-aware alarms. 
+
+### Key Features:
+- 🕒 Dynamic alarm scheduling based on calendar events & location
+- 🏃♂️ Auto-snooze detection when you start moving
+- 💤 Sleep cycle integration for natural wake-ups
+- 📍 Location-based reminders (home/work/gym)
+- 📊 Health app integration for activity tracking
+- 🔄 Customizable vibration patterns
+- 🌞 Sunrise simulation for gentle waking
+
+### Technical Highlights:
+- Built with SwiftUI for seamless watchOS integration
+- Optimized for Apple Watch Series 4 and newer
+- 100% native performance with Core Motion framework
+- Efficient battery management system
+- Secure local data storage with HealthKit integration
+
+### Compatibility:
+- Requires watchOS 10+
+- Pairs with iPhone iOS 17+
+- Available in 15 languages
+
+[Generated from project structure at 2025-04-26]
